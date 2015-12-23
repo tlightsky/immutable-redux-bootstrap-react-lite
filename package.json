@@ -1,0 +1,56 @@
+{
+  "name": "immutable-redux-bootstrap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server  --config webpack.config.development.js --devtool eval --progress --hot --colors --content-base out",
+    "lint": "eslint 'src/**/*.@(js|jsx)'",
+    "test": "npm run lint & mocha --compilers js:babel-core/register --recursive",
+    "build": "npm run build:umd:min",
+    "build:umd:min": "webpack src/index.js out/bundle.js --config webpack.config.production.js",
+    "coverage": "npm run lint & istanbul cover _mocha -- --compilers js:babel-core/register --recursive"
+  },
+  "keywords": ["react", "wechat", "redux", "immutable"],
+  "author": "wangchao719 <wangchao719@gmail.com> (http://tlightsky.github.io)",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-addons-pure-render-mixin": "0.14.3",
+    "react-redux": "4.0.0",
+    "react-router": "^1.0.2",
+    "keymirror": "0.1.1",
+    "history": "1.13.1",
+
+    "redux": "3.0.4",
+    "redux-router": "1.0.0-beta5",
+    "redux-logger": "1.0.5",
+    "redux-thunk": "^0.1.0",
+    "immutable": "^3.7.4"
+  },
+  "devDependencies": {
+    "autoprefixer-loader": "^3.1.0",
+    "babel": "^5.8.23",
+    "babel-core": "^5.8.23",
+    "babel-eslint": "^4.1.6",
+    "babel-loader": "^5.3.2",
+    "css-loader": "^0.23.0",
+    "enzyme": "^1.1.0",
+    "eslint": "^1.10.3",
+    "eslint-plugin-react": "^3.11.3",
+    "file-loader": "^0.8.5",
+    "istanbul": "^0.4.1",
+    "less": "^2.5.3",
+    "less-loader": "^2.2.1",
+    "mocha": "^2.3.4",
+    "open-browser-webpack-plugin": "0.0.1",
+    "react-addons-test-utils": "^0.14.3",
+    "rimraf": "^2.4.3",
+    "style-loader": "^0.13.0",
+    "uglify-loader": "^1.2.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.1"
+  }
+}
