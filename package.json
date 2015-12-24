@@ -25,9 +25,11 @@
 
     "redux": "3.0.4",
     "redux-router": "1.0.0-beta5",
-    "redux-logger": "1.0.5",
-    "redux-thunk": "^0.1.0",
-    "immutable": "^3.7.4"
+    "redux-logger": "2.3.1",
+    "redux-thunk": "1.0.2",
+    "immutable": "^3.7.6",
+
+    "lodash" : "3.10.1"
   },
   "devDependencies": {
     "autoprefixer-loader": "^3.1.0",
