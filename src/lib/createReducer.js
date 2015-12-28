@@ -1,4 +1,3 @@
-"use strict";
 import Immutable, { Map, List } from 'immutable';
 
 export default function createReducer(initialState, handlers) {
