@@ -21,7 +21,7 @@
     "react-redux": "4.0.0",
     "react-router": "^1.0.2",
     "keymirror": "0.1.1",
-    "history": "1.13.1",
+    "history": "1.17.0",
 
     "redux": "3.0.4",
     "redux-router": "1.0.0-beta5",
