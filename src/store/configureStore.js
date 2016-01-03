@@ -3,7 +3,6 @@ import thunk from 'redux-thunk'
 import createLogger from 'redux-logger';
 import { createHistory, createHashHistory } from 'history';
 import { reduxReactRouter } from 'redux-router';
-import { batchedUpdatesMiddleware } from './batchedUpdatesMiddleware';
 import { Iterable } from 'immutable';
 import _ from 'lodash';
 import reducer from '../reducers'
@@ -18,7 +17,7 @@ const logger = createLogger({
 });
 
 const createStoreWithMiddleware = compose(
-  applyMiddleware(thunk,logger,batchedUpdatesMiddleware),
+  applyMiddleware(thunk,logger),
   reduxReactRouter({ createHistory: _.partial(createHashHistory, { queryKey: false }) })
 )(createStore);
 

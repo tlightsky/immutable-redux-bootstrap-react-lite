@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server  --config webpack.config.development.js --devtool eval --progress --hot --colors --content-base out",
+    "start": "webpack-dev-server --host 0.0.0.0 --config webpack.config.development.js --devtool eval --progress --hot --colors --content-base out",
     "lint": "eslint 'src/**/*.@(js|jsx)'",
     "test": "npm run lint & mocha --compilers js:babel-core/register --recursive",
     "build": "npm run build:umd:min",
@@ -15,9 +15,7 @@
   "author": "wangchao719 <wangchao719@gmail.com> (http://tlightsky.github.io)",
   "license": "MIT",
   "dependencies": {
-    "react": "^0.14.3",
-    "react-dom": "^0.14.3",
-    "react-addons-pure-render-mixin": "0.14.3",
+    "react-lite": "0.0.8",
     "react-redux": "4.0.0",
     "react-router": "^1.0.2",
     "keymirror": "0.1.1",
@@ -47,7 +45,6 @@
     "less-loader": "^2.2.1",
     "mocha": "^2.3.4",
     "open-browser-webpack-plugin": "0.0.1",
-    "react-addons-test-utils": "^0.14.3",
     "rimraf": "^2.4.3",
     "style-loader": "^0.13.0",
     "uglify-loader": "^1.2.0",

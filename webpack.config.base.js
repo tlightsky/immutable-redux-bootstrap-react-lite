@@ -3,6 +3,12 @@
 var webpack = require('webpack');
 
 module.exports = {
+  resolve: {
+    alias: {
+      'react': 'react-lite',
+      'react-dom': 'react-lite'
+    },
+  },
   module: {
       loaders:[
           {
@@ -21,10 +27,4 @@ module.exports = {
           }
       ]
   }
-  // ,
-  // output: {
-  //     path: path.resolve(__dirname, 'out'),
-  //     publicPath: '/',
-  //     filename: './bundle.js'
-  // }
 };
